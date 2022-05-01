@@ -5,7 +5,12 @@ const router = express.Router();
 
 router.get("/", async (req, res) => {
     //console.log("in get /");
-    res.send("/ working")
+    res.render("index")
+});
+
+router.get("/gallery", async (req, res) => {
+    //console.log("in get /");
+    res.render("gallery")
 });
 
 module.exports = router;
