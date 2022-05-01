@@ -1,0 +1,7 @@
+body {
+    color: azure;
+    background-color: azure;
+    background-image: url(/static/images/bg-main-0.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
