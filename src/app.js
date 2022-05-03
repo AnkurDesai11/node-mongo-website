@@ -1,6 +1,7 @@
 const express = require("express");
 const hbs = require("hbs");
 const { default: mongoose } = require("mongoose");
+const Details = require("./models/Details");
 const app = express();
 const routes = require("./routes/main");
 //require("dotenv").config();
@@ -18,6 +19,32 @@ hbs.registerPartials("views/partials")
 //db connection
 mongoose.connect("mongodb://localhost/node-mongo-website", () => {
     console.log("db connected");
+    Details.create({
+        brandName: "Cool Site",
+        brandIconUrl: "http://www.w3schools.com/css/img_mountains.jpg",
+        links: [
+            {
+                label: "Home",
+                url: "/",
+            },
+            {
+                label: "Gallery",
+                url: "/gallery",
+            },
+            {
+                label: "Services",
+                url: "/services",
+            },
+            {
+                label: "About",
+                url: "/about",
+            },
+            {
+                label: "Contact Us",
+                url: "/contact-us",
+            },
+        ]
+    })
 })
 
 //hbs template engine
