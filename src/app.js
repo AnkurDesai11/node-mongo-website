@@ -2,6 +2,7 @@ const express = require("express");
 const hbs = require("hbs");
 const { default: mongoose } = require("mongoose");
 const Details = require("./models/Details");
+const Slides = require("./models/Slides");
 const app = express();
 const routes = require("./routes/main");
 //require("dotenv").config();
@@ -19,32 +20,54 @@ hbs.registerPartials("views/partials")
 //db connection
 mongoose.connect("mongodb://localhost/node-mongo-website", () => {
     console.log("db connected");
-    Details.create({
-        brandName: "Cool Site",
-        brandIconUrl: "http://www.w3schools.com/css/img_mountains.jpg",
-        links: [
-            {
-                label: "Home",
-                url: "/",
-            },
-            {
-                label: "Gallery",
-                url: "/gallery",
-            },
-            {
-                label: "Services",
-                url: "/services",
-            },
-            {
-                label: "About",
-                url: "/about",
-            },
-            {
-                label: "Contact Us",
-                url: "/contact-us",
-            },
-        ]
-    })
+    // Details.create({
+    //     brandName: "Cool Site",
+    //     brandIconUrl: "http://www.w3schools.com/css/img_mountains.jpg",
+    //     links: [
+    //         {
+    //             label: "Home",
+    //             url: "/",
+    //         },
+    //         {
+    //             label: "Gallery",
+    //             url: "/gallery",
+    //         },
+    //         {
+    //             label: "Services",
+    //             url: "/services",
+    //         },
+    //         {
+    //             label: "About",
+    //             url: "/about",
+    //         },
+    //         {
+    //             label: "Contact Us",
+    //             url: "/contact-us",
+    //         },
+    //     ]
+    // })
+    // Slides.create([
+    //     {
+    //         title: "Software",
+    //         subtitle: "code in an IDE",
+    //         imageUrl: "/static/images/bg-slider-1.jpg"
+    //     },
+    //     {
+    //         title: "Components",
+    //         subtitle: "Hardware components of a smartphone",
+    //         imageUrl: "/static/images/bg-slider-2.jpg"
+    //     },
+    //     {
+    //         title: "Console",
+    //         subtitle: "Pilot's console on an airplane",
+    //         imageUrl: "/static/images/bg-slider-3.jpg"
+    //     },
+    //     {
+    //         title: "System",
+    //         subtitle: "Compact tower watercooled PC",
+    //         imageUrl: "/static/images/bg-slider-4.jpg"
+    //     },
+    // ])
 })
 
 //hbs template engine
