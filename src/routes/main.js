@@ -8,6 +8,7 @@ router.get("/", async (req, res) => {
     const detail = await Details.findOne()
     const slides = await Slides.find()
     //console.log(detail)
+    //console.log(slides)
     res.render("index", { details: detail, slides: slides })
 });
 
