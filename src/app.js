@@ -3,6 +3,7 @@ const hbs = require("hbs");
 const { default: mongoose } = require("mongoose");
 const Details = require("./models/Details");
 const Slides = require("./models/Slides");
+const Projects = require("./models/Projects");
 const app = express();
 const routes = require("./routes/main");
 //require("dotenv").config();
@@ -66,6 +67,29 @@ mongoose.connect("mongodb://localhost/node-mongo-website", () => {
     //         title: "System",
     //         subtitle: "Compact tower watercooled PC",
     //         imageUrl: "/static/images/bg-slider-4.jpg"
+    //     },
+    // ])
+    // Projects.create([
+    //     {
+    //         icon: "fas fa-users-cog",
+    //         title: "User Access Review portal",
+    //         description: "Web app to facilitate user access review for an organisation",
+    //         exploreLink: "#!",
+    //         infoLink: "#!"
+    //     },
+    //     {
+    //         icon: "fas fa-bolt",
+    //         title: "Quizzap",
+    //         description: "Fullstack web app to server users with various quizzes. Also allows admin an interface to create quizzes",
+    //         exploreLink: "#!",
+    //         infoLink: "#!"
+    //     },
+    //     {
+    //         icon: "fas fa-chart-area",
+    //         title: "Moneypenny",
+    //         description: "Your personal secretary to the stock market",
+    //         exploreLink: "#!",
+    //         infoLink: "#!"
     //     },
     // ])
 })
