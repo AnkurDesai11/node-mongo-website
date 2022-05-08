@@ -24,12 +24,12 @@
 
     <!-- Projects section-->
     <section id="projects_section" class="py-3">
-        <div class="container-fluid">
+        <div class="container">
             <h2 class="text-center mt-4"><i class="fas fa-light fa-code text-secondary"></i>&nbsp Projects</h2>
             <div class="row mt-5">
                 {{#each projects}}
                 <div class="col-md-4">
-                    <div class="card">
+                    <div class="card mt-4">
                         <div class="card-body">
                             <div class="container text-center py-3">
                                 <i class="{{this.icon}} card-icon text-secondary"></i>
@@ -48,7 +48,42 @@
 
     <!--Projects section ends here-->
 
-    <!-- Contact us section -->
+    <!-- Contact us section-->
+
+    <section id="contact_us_section" class="py-5 custom-background ">
+        <div class="container">
+            <h2 class="text-center mt-4 mb-4"><i class="fas fa-light fa-code text-secondary"></i>&nbsp Contact Us</h2>
+            <div class="row">
+                <div class="class-md-12">
+                    <form class="row g-3">
+                        <div class="col-md-6">
+                            <label for="inputEmail" class="form-label">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="col-md-6">
+                            <label for="inputTel" class="form-label">Contact Number</label>
+                            <input type="tel" class="form-control" id="inputPassword4"
+                                placeholder="Please include country code if any">
+                        </div>
+                        <div id="emailHelp" class="form-text col-md-12">We'll never share your details with anyone else.
+                        </div>
+                        <div class="form-floating col-12">
+                            <textarea style="height: 150px;" class="form-control" placeholder="Leave a comment here"
+                                id="floatingTextarea"></textarea>
+                            <label for="floatingTextarea">Comments</label>
+                        </div>
+                        <div class="col-12 text-center">
+                            <button type="submit" class="btn btn-primary">Submit</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact us section ends here-->
+
+
     <!-- Optional JavaScript; choose one of the two! -->
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
