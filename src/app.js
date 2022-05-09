@@ -1,6 +1,7 @@
 const express = require("express");
 const hbs = require("hbs");
 const { default: mongoose } = require("mongoose");
+const bodyParser = require("body-parser");
 const Details = require("./models/Details");
 const Slides = require("./models/Slides");
 const Projects = require("./models/Projects");
@@ -8,12 +9,6 @@ const app = express();
 const routes = require("./routes/main");
 //require("dotenv").config();
 const port = process.env.PORT || 3500;
-
-// access all files in public folder using static path eg. /static/css/styles.css
-app.use("/static", express.static("public"))
-
-//app.use(bodyParser.json());
-app.use("", routes);
 
 // partials(ie. reusable components like navbar) declaration
 hbs.registerPartials("views/partials")
@@ -98,6 +93,10 @@ mongoose.connect("mongodb://localhost/node-mongo-website", () => {
 app.set("view engine", "hbs")
 app.set("views", "views")//second arhuement is filepath of the views folder wrt to top level project folder
 
+// access all files in public folder using static path eg. /static/css/styles.css
+app.use("/static", express.static("public"))
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use("", routes);
 
 app.listen(port, () => {
     console.log("server is running on port", port);
