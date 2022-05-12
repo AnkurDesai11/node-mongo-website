@@ -15,6 +15,11 @@
     font-size: 75px;
 }
 
+.social-icon {
+    font-size: 25px;
+    color: inherit;
+}
+
 .custom-background {
     color: rgb(179, 130, 67);
     background-color: #332211;

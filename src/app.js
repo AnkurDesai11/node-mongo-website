@@ -3,6 +3,7 @@ const hbs = require("hbs");
 const { default: mongoose } = require("mongoose");
 const bodyParser = require("body-parser");
 const Details = require("./models/Details");
+const Footer = require("./models/Footer");
 const Slides = require("./models/Slides");
 const Projects = require("./models/Projects");
 const app = express();
@@ -87,6 +88,56 @@ mongoose.connect("mongodb://localhost/node-mongo-website", () => {
     //         infoLink: "#!"
     //     },
     // ])
+    // Footer.create({
+    //     brandName: "Cool Site",
+    //     brandText: "Cool Site",
+    //     brandIconUrl: "",
+    //     brandIconText: "",
+    //     siteLinks: [
+    //         {
+    //             label: "Home",
+    //             url: "/",
+    //         },
+    //         {
+    //             label: "Gallery",
+    //             url: "/gallery",
+    //         },
+    //         {
+    //             label: "Services",
+    //             url: "/services",
+    //         },
+    //         {
+    //             label: "About",
+    //             url: "/about",
+    //         },
+    //         {
+    //             label: "Contact Us",
+    //             url: "/contact-us",
+    //         },
+    //     ],
+    //     socialLinks: [
+    //         {
+    //             icon: "fa-brands fa-linkedin",
+    //             url: "https://www.linkedin.com/",
+    //         },
+    //         {
+    //             icon: "fa-brands fa-github",
+    //             url: "https://www.github.com/",
+    //         },
+    //         {
+    //             icon: "fa-brands fa-youtube",
+    //             url: "https://www.youtube.com/",
+    //         },
+    //         {
+    //             icon: "fa-brands fa-facebook",
+    //             url: "https://www.facebook.com/",
+    //         },
+    //         {
+    //             icon: "fa-brands fa-instagram",
+    //             url: "https://www.instagram.com/",
+    //         },
+    //     ]
+    // })
 })
 
 //hbs template engine

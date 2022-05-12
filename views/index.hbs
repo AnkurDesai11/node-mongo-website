@@ -24,11 +24,15 @@
 
     <!-- Banner section start-->
 
-    <section id="projects_section">
+    <section class="banner_section text-center custom-background py-5">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
-
+                    <h2>Intro Title</h2>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Accusamus numquam id doloribus
+                        voluptatibus. Laborum a maxime expedita excepturi ut corporis ad ipsa porro dolore? Expedita
+                        laboriosam natus sapiente delectus incidunt.</p>
+                    <button class="btn btn-secondary">Learn more</button>
                 </div>
             </div>
         </div>
@@ -66,7 +70,7 @@
         <div class="container">
             <h2 class="text-center mt-4 mb-4"><i class="fa-regular fa-comment-dots"></i>&nbsp Contact Us</h2>
             <div class="row">
-                <div class="class-md-12">
+                <div class="col-md-12">
                     <form action="/contact-form" method="post" class="row g-3">
                         <div class="col-md-6">
                             <label name="email" for="inputEmail" class="form-label">Email</label>
@@ -85,7 +89,7 @@
                             <label for="floatingTextarea">Comments</label>
                         </div>
                         <div class="col-12 text-center">
-                            <button type="submit" class="btn btn-primary">Submit</button>
+                            <button type="submit" class="btn btn-secondary">Submit</button>
                         </div>
                     </form>
                 </div>
@@ -96,6 +100,9 @@
         <span id="message" message="{{message}}"></span>
     </div>
     <!-- Contact us section ends here-->
+
+    <!-- Footer -->
+    {{>footer footer=footer}}
 
 
     <!-- Optional JavaScript; choose one of the two! -->
